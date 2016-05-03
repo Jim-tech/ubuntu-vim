@@ -212,6 +212,10 @@ nnoremap <F10> :cp<CR>
 " switch between c/h
 nnoremap <F6> :A<CR>
 
+" switch buffer
+nnoremap <F3> :bp<CR>
+nnoremap <F4> :bn<CR>
+
 " vim-airline
 set laststatus=2
 set t_Co=256
