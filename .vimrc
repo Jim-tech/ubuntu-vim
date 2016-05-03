@@ -1,4 +1,4 @@
-
+" =============================================================================
 " initial config
 " =============================================================================
 
@@ -34,12 +34,12 @@ Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'file:///home/jim/.vim/bundle/Vundle'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
 
 " ------------------------------------------------------------------------
 " jim's plugin
@@ -81,8 +81,8 @@ Plugin  'sjl/gundo.vim'
 Plugin  'nelstrom/vim-visual-star-search'
 Plugin  'nelstrom/vim-qargs'
 Plugin  'klen/python-mode'
-Plugin 'vim-airline'
-Plugin 'vim-airline/airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin  'SirVer/ultisnips'
 " Plugin  'xuhdev/SingleCompile'
 " Plugin  'oblitum/bufkill'
@@ -116,7 +116,7 @@ Plugin  'bufexplorer.zip'
 " Plugin  'calendar.vim--Matsumoto'
 " Plugin  'DoxygenToolkit.vim'
 Plugin  'ZoomWin'
-Plugin  'DrawIt'
+Plugin 'DrawIt'
 " ------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
@@ -209,6 +209,17 @@ nnoremap <F12> :cclose<CR>
 nnoremap <F9> :cn<CR>
 nnoremap <F10> :cp<CR>
 
+" switch between c/h
+nnoremap <F6> :A<CR>
+
+" vim-airline
+set laststatus=2
+set t_Co=256
+" set g:airline_theme="durant"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 " =============================================================================
 
 " =============================================================================
@@ -224,7 +235,7 @@ set smartindent        "cindent smartindent   autoindent
 set autoindent        "cindent smartindent   autoindent
 set tabstop=4     " tab占用4个空格
 set shiftwidth=4  " 设置缩进为4字节
-set expandtab     " 扩展tab键为空格
+" set expandtab     " 扩展tab键为空格
 set incsearch     " 增量式搜索
 set hlsearch      " 高亮搜索
 
@@ -250,8 +261,8 @@ autocmd FileType python set smartindent
 set autoread
 
 " 设置当前横竖线
-" set cursorline
-" set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 set ruler
 set showcmd
@@ -306,6 +317,11 @@ au FileType nerdtree cnoreabbrev <buffer> BD <nop>
 nnoremap <leader><Enter> <C-]>
 "}}}
 
+"tabularize config
+nmap <leader>a= :Tabularize /=<cr>
+nmap <leader>a: :Tabularize /:<cr>
+nmap <leader>a, :Tabularize /,<cr>
+
 
 "automatically save foldings in vim{{{
 " au BufWinLeave * silent! mkview
@@ -320,10 +336,6 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
-set noshowmode
-set t_Co=256
 
 "configure for UltiSnips plugin {{{ 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -364,3 +376,5 @@ endif
 
 
 " =============================================================================
+
+
