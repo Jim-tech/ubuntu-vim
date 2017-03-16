@@ -144,7 +144,10 @@ let g:mapleader = ','
 
 " 去掉搜索高亮
 "noremap <silent><leader>/ :nohls<CR>
-map <leader>/ :nohls<CR>
+"map <leader>/ :nohls<CR>
+
+" 注释
+map <leader>/ gc<CR>
 
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -289,7 +292,7 @@ set pastetoggle=<F2>
 
 "plugins key maps" {{{
 "--commentary plugin,comment a line
-map <leader>/ \\\
+
 "go back and forth from header file and source file
 nmap <silent> <leader>f :A<cr>
 "open a tag list ivew
