@@ -282,7 +282,7 @@ set lbr
 set shiftround
 set completeopt=longest,menu
 set wildmenu
-set mouse=a        " 设置vim中可以使用鼠标
+" set mouse=a        " 设置vim中可以使用鼠标
 set magic          " 为了使用正则表达式
 set nowrap
 
@@ -380,7 +380,6 @@ if os=="win"
 "set guioptions-=T
 "language message zh_CN.utf-8
 endif
-
 
 " =============================================================================
 
