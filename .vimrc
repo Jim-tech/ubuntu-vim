@@ -144,7 +144,8 @@ let g:mapleader = ','
 
 " 去掉搜索高亮
 "noremap <silent><leader>/ :nohls<CR>
-map <leader>/ :nohls<CR>
+"map <leader>/ :nohls<CR>
+map <leader>/ \\\
 
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
