@@ -34,12 +34,12 @@ Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'file:///home/jim/.vim/bundle/Vundle'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
+Plugin 'user/L9', {'name': 'newL9'}
 
 " ------------------------------------------------------------------------
 " jim's plugin
@@ -50,7 +50,7 @@ Plugin 'tommcdo/vim-exchange'
 " Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/nerdtree'
-" Plugin  'scrooloose/syntastic'
+Plugin  'scrooloose/syntastic'
 " Plugin 'tommcdo/vim-exchange'
 Plugin 'terryma/vim-multiple-cursors'
 
@@ -384,6 +384,10 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set noshowmode
+set t_Co=256
 
 "configure for UltiSnips plugin {{{ 
 let g:UltiSnipsExpandTrigger="<tab>"
