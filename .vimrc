@@ -34,7 +34,7 @@ Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/jim/.vim/bundle/Vundle'
+Plugin 'file:///root/.vim/bundle/Vundle'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -92,7 +92,7 @@ Plugin  'mileszs/ack.vim'
 " Plugin  'kchmck/vim-coffee-script'
 " Plugin  'skammer/vim-css-color'
 Plugin  'xolox/vim-misc'
-Plugin  'Valloric/YouCompleteMe'
+" Plugin  'Valloric/YouCompleteMe'
 " if you use Vim for programming, please comment the necomplcache and use
 " YouComplete Me instead
 " Plugin 'Shougo/neocomplcache.vim'
